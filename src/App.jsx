@@ -1,9 +1,10 @@
 import './styles/index.scss'
+import Form from './Form'
 
 function App() {
   return (
     <div className="App">
-      Leshgo v1
+      <Form />
     </div>
   );
 }
