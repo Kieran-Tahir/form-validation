@@ -1,10 +1,17 @@
-# `Kieran's React Template v1`
+# Form Validaiton
 
-### `npm start`
+## Setup 
+<details> 
+<summary>🏁</summary>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- Clone the repo onto your machine by opening the terminal at your workspace folder and typing `git clone` followed the 'SSH key'.
+- Create a new branch with `git checkout -b YOUR_NAME`
+- Open the repo with `code .`
+- Open this readme file in VS Code and click `ctrl+shft+v`. This file will open in PREVIEW mode and will be a whole lot nicer to read...💥
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+</details>
+<br>
 
+## Overview
+
+This repo is designed to teach you how to validate a form using regular expressions.

@@ -3,7 +3,7 @@ import './styles/index.scss'
 function App() {
   return (
     <div className="App">
-      Leshgo v1
+      Form goes here...
     </div>
   );
 }
