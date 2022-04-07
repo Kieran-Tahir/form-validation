@@ -20,5 +20,5 @@ This repo is designed to teach you how to validate a form using regular expressi
 
 - Create a file called ```Form.jsx```
 - Add the ```Form.jsx``` component to ```App.jsx```
-- In ```Form.jsx``` create a form that takes an email and a password.
-- 
+- In ```Form.jsx``` create two input fields that take an email address and a password.
+
