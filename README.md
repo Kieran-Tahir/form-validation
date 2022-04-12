@@ -39,6 +39,7 @@ Then we are going to create a form that allows a user to input these values and 
     - Import React and useState.
     - Import your regexes from ```regex.js```
     - Add state for each variable.
+    - Add 'error' state for each variable
     - Create input fields that take input data for each variable.
     - In each input field add an ```onChange``` that sets the input data as the state for the corresponding variable.
     - Create a function called ```validate``` that checks the input value against the regexes you wrote in ```regex.js```. Try this yourself first, and if you are having trouble - check the hint below.
@@ -51,9 +52,6 @@ function validate () {
       if (!validEmail.test(email)) {
          setEmailErr(true)
       }
-      if (!validPassword.test(password)) {
-         setPwdError(true)
-      }
    }
 ```
 
@@ -62,7 +60,7 @@ function validate () {
 ### Step 3
 
 - Create a button that calls the validate function when clicked.
-- If the email or password is not valid then display 'This email / password is invalid'
+- If the input is not valid then display 'This input is invalid'
 
 ### Step 4
 
