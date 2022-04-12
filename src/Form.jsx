@@ -14,6 +14,9 @@ function Form () {
    const [emailErr, setEmailErr] = useState(false)
    
    function validate () {
+      setEmailErr(false)
+      setFirstErr(false)
+
       if (!validEmail.test(email)) {
          setEmailErr(true)
       } 
@@ -22,9 +25,10 @@ function Form () {
          setFirstErr(true)
       } 
       
-      if(!setEmailErr === false && !setFirstErr === false){
-         alert('Your form is valid!')
-      }
+   }
+
+   function showSignUpButton () {
+      //test here
    }
 
    return (
@@ -70,8 +74,13 @@ function Form () {
          />
          <br></br>      
          <div>
-            <button onClick={validate}> Validate </button>
+            <button onClick={() => validate()}> Validate </button>
          </div>
+         {emailErr === false && firstErr === false &&
+         <div>
+            <button> Sign Up </button>
+         </div>
+         }
       </div>
    )
 }
