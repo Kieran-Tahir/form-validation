@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { validEmail } from './regex.js'
+import { validFirst, validLast, validEmail } from './regex.js'
 
 function Form () {
    const [firstName, setFirstName] = useState('')
@@ -8,16 +8,21 @@ function Form () {
    const [email, setEmail] = useState('')
    const [donation, setDonation] = useState(Number)
 
-   const [firstErr, setfirstErr] = useState(false)
+   const [firstErr, setFirstErr] = useState(false)
    const [lastErr, setLastErr] = useState(false)
    const [DOBErr, setDOBErr] = useState(false)
    const [emailErr, setEmailErr] = useState(false)
-   const [donationErr, setDonationErr] = useState(false)
    
    function validate () {
       if (!validEmail.test(email)) {
          setEmailErr(true)
-      } else {
+      } 
+      
+      if (!validFirst.test(firstName)) {
+         setFirstErr(true)
+      } 
+      
+      if(!setEmailErr === false && !setFirstErr === false){
          alert('Your form is valid!')
       }
    }
@@ -25,20 +30,23 @@ function Form () {
    return (
       <div className="form">
          <h2>Please enter your details</h2>
+         {firstErr && <p>Please enter a valid first name</p>}
          <input
             type="text"
             placeholder="First Name"
             value={firstName}
             onChange={(e) => setFirstName(e.target.value)}
          />
-         <br></br>     
+         <br></br>
+         {lastErr && <p>Please enter a valid last name</p>}     
          <input
             type="text"
             placeholder="Last Name"
             value={lastName}
             onChange={(e) => setLastName(e.target.value)}
          />
-         <br></br>     
+         <br></br>
+         {DOBErr && <p>Please enter a valid Date of Birth</p>}    
          <input
             type="date"
             placeholder="Date of Birth"
@@ -46,6 +54,7 @@ function Form () {
             onChange={(e) => setDOB(e.target.value)}
          />
          <br></br>      
+         {emailErr && <p>Please enter a valid email address</p>}
          <input
             type="email"
             placeholder="Email"
@@ -63,7 +72,6 @@ function Form () {
          <div>
             <button onClick={validate}> Validate </button>
          </div>
-         {emailErr && <p>Your email is invalid</p>}
       </div>
    )
 }
