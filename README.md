@@ -14,12 +14,20 @@
 
 ## Overview
 
-This repo is designed to teach you how to validate a form using regular expressions. First we are going to write regexes that match a valid email and password. Then we are going to create a form that allows a user to input an email and password and validate those with our regexes. This kind of 'form validation' is a common feature in many web applications. It is essential for preventing invalid, junk or malicious inputs in our app. 🐱‍💻
+This repo is designed to teach you how to validate a charity donation form using regular expressions. First we are going to write regexes that match the following:
+
+- First name (max 20 characters, no symbols, no obscenities)
+- Last name (max 20 characters, no symbols, no obscenities)
+- Realistic date of birth (not over 150 years)
+- Email address
+- Amount of money to donate (rounded to the nearest dollar)
+
+Then we are going to create a form that allows a user to input these values and validate those with our regexes. This kind of 'form validation' is a common feature in many websites. It is essential for preventing invalid, junk or malicious inputs in our site. 🐱‍💻
 
 ### Step 1
 
 - Create a file called ```regex.js```
-- In this file you are going to create two variables - one called validEmail and one called validPassword. Each of these will be defined as ```new RegExp()```
+- In this file you are going to create variables for each of the inputs listed above. Each of these will be defined as ```new RegExp()```
 - Inside the brackets you will write your own regexes for each of the variables.
 - Export these variables
 
@@ -30,9 +38,9 @@ This repo is designed to teach you how to validate a form using regular expressi
 - In ```Form.jsx```:
     - Import React and useState.
     - Import your regexes from ```regex.js```
-    - Add state for email, password, emailError and passwordError.
-    - Create two input fields that take an email address and a password.
-    - In each input field add an ```onChange``` that sets the input value as the state for the email or password.
+    - Add state for each variable.
+    - Create input fields that take input data for each variable.
+    - In each input field add an ```onChange``` that sets the input data as the state for the corresponding variable.
     - Create a function called ```validate``` that checks the input value against the regexes you wrote in ```regex.js```. Try this yourself first, and if you are having trouble - check the hint below.
 
 <details> 
