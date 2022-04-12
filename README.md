@@ -1,4 +1,4 @@
-# Form Validaiton
+# Form Validation
 
 ## Setup 
 <details> 
@@ -14,4 +14,56 @@
 
 ## Overview
 
-This repo is designed to teach you how to validate a form using regular expressions.
+This repo is designed to teach you how to validate a charity donation form using regular expressions. First we are going to write regexes that match the following:
+
+- First name (max 20 characters, no symbols, no obscenities)
+- Last name (max 20 characters, no symbols, no obscenities)
+- Realistic date of birth (not over 150 years)
+- Email address
+- Amount of money to donate (rounded to the nearest dollar)
+
+Then we are going to create a form that allows a user to input these values and validate those with our regexes. This kind of 'form validation' is a common feature in many websites. It is essential for preventing invalid, junk or malicious inputs in our site. 🐱‍💻
+
+### Step 1
+
+- Create a file called ```regex.js```
+- In this file you are going to create variables for each of the inputs listed above. Each of these will be defined as ```new RegExp()```
+- Inside the brackets you will write your own regexes for each of the variables.
+- Export these variables
+
+### Step 2
+
+- Create a file called ```Form.jsx```
+- Add the ```Form.jsx``` component to ```App.jsx```
+- In ```Form.jsx```:
+    - Import React and useState.
+    - Import your regexes from ```regex.js```
+    - Add state for each variable.
+    - Create input fields that take input data for each variable.
+    - In each input field add an ```onChange``` that sets the input data as the state for the corresponding variable.
+    - Create a function called ```validate``` that checks the input value against the regexes you wrote in ```regex.js```. Try this yourself first, and if you are having trouble - check the hint below.
+
+<details> 
+<summary>Hint...</summary>
+
+```
+function validate () {
+      if (!validEmail.test(email)) {
+         setEmailErr(true)
+      }
+      if (!validPassword.test(password)) {
+         setPwdError(true)
+      }
+   }
+```
+
+</details>
+
+### Step 3
+
+- Create a button that calls the validate function when clicked.
+- If the email or password is not valid then display 'This email / password is invalid'
+
+### Step 4
+
+Now it is time for you to apply this concept to your personal project! 
