@@ -60,7 +60,7 @@ function validate () {
 ### Step 3
 
 - Create a button that calls the validate function when clicked.
-- If the input is not valid then display 'This input is invalid'
+- If all inputs are valid then display another button that says 'Sign Up!'
 
 ### Step 4
 
