@@ -16,11 +16,11 @@
 
 This repo is designed to teach you how to validate a charity donation form using regular expressions. First we are going to write regexes that match the following:
 
-- First name (max 20 characters, no symbols, no obscenities)
-- Last name (max 20 characters, no symbols, no obscenities)
+- First name (max 20 characters, no symbols)
+- Last name (max 20 characters, no symbols)
 - Realistic date of birth (not over 150 years)
 - Email address
-- Amount of money to donate (rounded to the nearest dollar)
+- Amount of money to donate
 
 Then we are going to create a form that allows a user to input these values and validate those with our regexes. This kind of 'form validation' is a common feature in many websites. It is essential for preventing invalid, junk or malicious inputs in our site. 🐱‍💻
 
